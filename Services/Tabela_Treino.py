@@ -8,15 +8,15 @@ cursor = conexao.cursor()
  
 cursor.execute(
     '''
-        CREATE TABLE Treino(
-            ID_Treino INTEGER (11) NOT NULL UNIQUE PRIMARY KEY,
-            Alongamentos VARCHAR (255),
-            Exercicios_Aerobicos VARCHAR (255),
-            Exercicios_Maquina VARCHAR (255),
-            Carga INTEGER (11)
-            CPF_Aluno INTEGER (11) UNIQUE NOT NULL
-            FOREIGN KEY CPF_Aluno REFERENCES Aluno(CPF_Aluno)
-        ) ENGINE=InnoDB;
+        CREATE TABLE IF NOT EXISTS Treino(
+            ID_Treino INTEGER NOT NULL PRIMARY KEY,
+            Alongamentos TEXT,
+            Exercicios_Aerobicos TEXT,
+            Exercicios_Maquina TEXT,
+            Carga INTEGER,
+            CPF_Aluno INTEGER UNIQUE NOT NULL,
+            FOREIGN KEY (CPF_Aluno) REFERENCES Aluno (CPF_Aluno)
+        );
     '''
 )
 cursor.close()

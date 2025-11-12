@@ -11,8 +11,8 @@ cursor.execute(
         CREATE TABLE Aula(
             ID_Aula INTEGER (11) NOT NULL UNIQUE PRIMARY KEY,
             Tipo_Aula VARCHAR (255) UNIQUE NOT NULL,
-            ID_Professor INTEGER (11) UNIQUE NOT NULL,
-            FOREIGN KEY ID_Professor REFERENCES Professor(ID_Professor)
+            CPF_Professor INTEGER (11) UNIQUE NOT NULL,
+            FOREIGN KEY CPF_Professor REFERENCES Professor(CPF_Professor)
         ) ENGINE=InnoDB;
     '''
 )

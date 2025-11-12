@@ -8,13 +8,13 @@ cursor = conexao.cursor()
  
 cursor.execute(
     '''
-        CREATE TABLE Produto(
-            ID_Produto INTEGER (11) UNIQUE NOT NULL,
-            Tipo_Produto VARCHAR (255) NOT NULL,
-            Nome_Produto VARCHAR (255) NOT NULL,
-            CPF_Aluno INTEGER (11) UNIQUE,
-            FOREIGN KEY CFP_Aluno REFERENCES Aluno(CPF_Aluno)
-        ) ENGINE=InnoDB;
+        CREATE TABLE IF NOT EXISTS Produto(
+            ID_Produto INTEGER NOT NULL PRIMARY KEY,
+            Tipo_Produto TEXT NOT NULL,
+            Nome_Produto TEXT NOT NULL,
+            CPF_Aluno INTEGER NOT NULL,
+            FOREIGN KEY (CPF_Aluno) REFERENCES Aluno (CPF_Aluno)
+        );
     '''
 )
 cursor.close()

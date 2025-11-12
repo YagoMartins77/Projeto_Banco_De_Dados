@@ -1,9 +1,11 @@
-class Professor:
-    def_init_(self,cpf,rg,nome,horarios_disponiveis,telefone):
+import abc as ABC
+
+class Personal(ABC):
+    def _init_(self, cpf, rg, nome, horario_pers, telefone):
         self._cpf = cpf
         self._rg = rg
         self._nome = nome
-        self._horario_disponiveis = time
+        self._horario_pers = horario_pers
         self._telefone = telefone
 
     def get_cpf(self):
@@ -25,12 +27,12 @@ class Professor:
         self._nome = nome
      
     def get_time(self):
-        return self._time
+        return self._horario_pers
 
-    def set_time(self, time):
-        self._time = time
+    def set_time(self, horario_pers):
+        self._horario_pers = horario_pers
      
-     def get_telefone(self):
+    def get_telefone(self):
         return self._telefone
 
     def set_telefone(self, telefone):

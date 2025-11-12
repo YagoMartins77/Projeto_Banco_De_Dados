@@ -1,8 +1,8 @@
 # Controllers/PessoasController.py
 import sqlite3
-from Models.Aluno import Aluno
-from Models.Professor import Professor
-from Models.Personal import Personal
+from Modelos.Aluno import Aluno
+from Modelos.Professor import Professor
+from Modelos.Personal import Personal
 
 def conectaBD():
     conexao = sqlite3.connect("Academia.db")
@@ -19,12 +19,13 @@ def incluirPessoa(pessoa):
             """, (
                 pessoa.get_cpf_aluno(),
                 pessoa.get_rg_aluno(),
-                pessoa.get_telefone(),
-                pessoa.get_nome(),
+                pessoa.get_telefone_al(),
+                pessoa.get_nome_al(),
                 pessoa.get_objetivo_treino(),
                 pessoa.get_tipo_plano(),
-                pessoa.get_cpf_personal(),
+                pessoa.get_cpf_pers(),
             )) 
+<<<<<<< HEAD
 
         elif isinstance(pessoa, Professor):
             cursor.execute("""
@@ -54,8 +55,41 @@ def incluirPessoa(pessoa):
         print("Dados inseridos com sucesso!")
     except sqlite3.Error as e:
         print(f"Erro ao inserir uma novo usuário: {e}")
+=======
+        elif isinstance(pessoa, Professor):
+            cursor.execute("""
+                INSERT INTO funcionario (CPF_Prof, RG_Prof, Nome_Prof, Horario_Prof, Telefone_Prof)
+                VALUES (?, ?, ?, ?, ?)
+            """, (
+                pessoa.get_cpf_prof(),
+                pessoa.get_rg_prof(),
+                pessoa.get_nome_prof(),
+                pessoa.get_horario_prof(),
+                pessoa.get_numero_prof()
+            ))     
+        elif isinstance(pessoa, Personal):
+            cursor.execute("""
+                INSERT INTO funcionario (CPF_Personal, RG_Personal, Nome_Personal, Horario_Personal, Telefone_Personal)
+                VALUES (?, ?, ?, ?, ?)
+            """, (
+                pessoa.get_cpf_pers(),
+                pessoa.get_rg_pers(),
+                pessoa.get_nome_pers(),
+                pessoa.get_horario_pers(),
+                pessoa.get_numero_pers()
+            ))     
+
+        conexao.commit()
+        print("Funcionário inserido com sucesso!")
+
+    except sqlite3.Error as e:
+        print(f"Erro ao inserir funcionário: {e}")
+
+>>>>>>> 6f8c5ea (Terceiro Commit:)
     finally:
         conexao.close()
+
+
 
 def consultarFuncionario():
     conexao = conectaBD()

@@ -9,12 +9,12 @@ cursor = conexao.cursor()
 cursor.execute(
     '''
         CREATE TABLE Aluno_Aula(
-            ID_Aula INTEGER (11) UNIQUE NOT NULL,
-            CPF_Aluno INTEGER (11) UNIQUE NOT NULL,
+            ID_Aula INTEGER NOT NULL,
+            CPF_Aluno INTEGER NOT NULL,
             PRIMARY KEY (ID_Aula, CPF_Aluno),
-            FOREIGN KEY ID_Aula REFERENCES Aula(ID_Aula),
-            FOREIGN KEY CPF_Aluno REFERENCES Aluno(CPF_Aluno)
-        ) ENGINE=InnoDB;
+            FOREIGN KEY (ID_Aula) REFERENCES Aula (ID_Aula),
+            FOREIGN KEY (CPF_Aluno) REFERENCES Aluno (CPF_Aluno)
+        );
     '''
 )
 cursor.close()

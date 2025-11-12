@@ -8,10 +8,10 @@ cursor = conexao.cursor()
  
 cursor.execute(
     '''
-        CREATE TABLE Plano(
-            Tipo_Plano VARCHAR (255) NOT NULL PRIMARY KEY,
-            ID_Plano INTEGER (11) UNIQUE NOT NULL
-        ) ENGINE=InnoDB;
+        CREATE TABLE IF NOT EXISTS Plano(
+            Tipo_Plano TEXT NOT NULL PRIMARY KEY,
+            ID_Plano INTEGER UNIQUE NOT NULL
+        );
     '''
 )
 cursor.close()

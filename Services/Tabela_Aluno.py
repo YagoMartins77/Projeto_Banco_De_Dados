@@ -8,6 +8,7 @@ cursor = conexao.cursor()
  
 cursor.execute(
     '''
+<<<<<<< HEAD
         CREATE TABLE Aluno(
             CPF_Aluno INTEGER (11) UNIQUE PRIMARY KEY NOT NULL
             RG_Aluno INTEGER (11) UNIQUE NOT NULL,
@@ -19,6 +20,19 @@ cursor.execute(
             FOREIGN KEY Tipo_Plano REFERENCES Plano(Tipo_Plano),
             FOREIGN KEY CPF_Personal REFERENCES Personal(CPF_Personal)
         ) ENGINE=InnoDB;
+=======
+    CREATE TABLE IF NOT EXISTS Aluno (
+        CPF_Aluno INTEGER PRIMARY KEY,
+        RG_Aluno INTEGER UNIQUE NOT NULL,
+        Telefone_Aluno INTEGER NOT NULL,
+        Nome_Aluno TEXT NOT NULL,
+        Objetivo_Treino TEXT,
+        Tipo_Plano TEXT,
+        CPF_Personal INTEGER NOT NULL,
+        FOREIGN KEY (Tipo_Plano) REFERENCES Plano (Tipo_Plano),
+        FOREIGN KEY (CPF_Personal) REFERENCES Personal (CPF_Personal)
+    );
+>>>>>>> 6f8c5ea (Terceiro Commit:)
     '''
 )
 cursor.close()
