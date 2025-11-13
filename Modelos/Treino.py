@@ -1,5 +1,5 @@
 class Treino:
-    def_init_(self, id_tr, alongamentos, exercicios_arbcs, exercicios_mqn, carga_mqn, cpf_aluno):
+    def _init_(self, id_tr, alongamentos, exercicios_arbcs, exercicios_mqn, carga_mqn, cpf_aluno):
         self._id_tr = id_tr 
         self._alongamentos = alongamentos
         self._exercicios_mqn = exercicios_mqn
@@ -56,3 +56,4 @@ class Treino:
         self._cpf_aluno = value
 
         pass
+
