@@ -1,5 +1,5 @@
 class Aluno:
-    def_init_(self, cpf_aluno, rg_aluno, telfone_aluno, nome_aluno, objetivo_treino, tipo_plano, cpf_pers):
+    def _init_(self, cpf_aluno, rg_aluno, telfone_aluno, nome_aluno, objetivo_treino, tipo_plano, cpf_pers):
         self._cpf_aluno = cpf_aluno
         self._rg_aluno = rg_aluno
         self._telefone_aluno = telfone_aluno
@@ -64,3 +64,4 @@ class Aluno:
     def cpf_pers(self, value):
         self._cpf_pers = value
     pass
+
