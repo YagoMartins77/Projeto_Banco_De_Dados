@@ -1,5 +1,5 @@
 class Aluno_Aula:
-    def_init_(self, id_aula, cpf_aluno):
+    def _init_(self, id_aula, cpf_aluno):
         self._id_aula = id_aula
         self._cpf_aluno = cpf_aluno
 
@@ -20,3 +20,4 @@ class Aluno_Aula:
         self._cpf_aluno = value
 
         pass
+
