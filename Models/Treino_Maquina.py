@@ -1,24 +1,24 @@
+from Models.Maquina import Maquina
+
 class Treino_Maquina:
     def __init__(self, id_tr, nome_mqn):
+        super().__init__(self, id_tr, nome_mqn)
         self._id_tr = id_tr
         self._nome_mqn = nome_mqn
-
-
-    @property
-    def id_tr(self):
+   
+    def get_id_tr(self):
         return self._id_tr
 
-    @id_tr.setter
-    def id_tr(self, value):
-        self._id_tr = value
+   
+    def set_id_tr(self, id_tr):
+        self._id_tr = id_tr
 
-    @property
-    def nome_mqn(self):
+  
+    def get_nome_mqn(self):
         return self._nome_mqn
 
-    @nome_mqn.setter
-    def nome_mqn(self, value):
-        self._nome_mqn = value
+    def set_nome_mqn(self, nome_mqn):
+        self._nome_mqn = nome_mqn
 
         pass
 

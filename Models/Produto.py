@@ -1,5 +1,9 @@
+from Models.Produto import Produto
+
 class Produto:
+    
     def __init__(self,tipo_pr ,nome_pr ,cpf_aluno, id_pr):
+        super().__init__(self,tipo_pr ,nome_pr ,cpf_aluno, id_pr)
         self._id_pr = id_pr
         self._tipo_pr = tipo_pr
         self._nome_pr_ = nome_pr

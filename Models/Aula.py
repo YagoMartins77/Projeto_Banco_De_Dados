@@ -1,30 +1,29 @@
+from Models.Aula import Alula
+
 class Alula:
     def __init__(self, id_aula, tipo_aula, cpf_professor):
+        super().__init__(self, id_aula, tipo_aula, cpf_professor)
         self._id_aula = id_aula
         self._tipo_aula = tipo_aula
         self._cpf_professor = cpf_professor
 
-    @property
-    def id_aula(self):
+    def get_id_aula(self):
         return self._id_aula
 
-    @id_aula.setter
-    def id_aula(self, value):
-        self._id_aula = value
+    def set_id_aula(self, id_aula):
+        self._id_aula = id_aula
 
-    @property
-    def tipo_aula(self):
+    def get_tipo_aula(self):
         return self._tipo_aula
 
-    @tipo_aula.setter
-    def tipo_aula(self, value):
-        self._tipo_aula = value
+    def set_tipo_aula(self, tipo_aula):
+        self._tipo_aula = tipo_aula
 
-    @property
-    def cpf_professor(self):
+    def get_cpf_professor(self):
         return self._cpf_professor
 
-    @cpf_professor.setter
-    def cpf_professor(self, value):
-        self._cpf_professor = value
+    def set_cpf_professor(self, cpf_professor):
+        self._cpf_professor = cpf_professor
+
+        pass
 

@@ -1,23 +1,26 @@
+from Models.Aluno_Aula import Aluno_Aulaluno
+
+
 class Aluno_Aula:
-    def __init__(self, id_aula, cpf_aluno):
+    
+def __init__(self, id_aula, cpf_aluno):
+        super()._init_(self, id_aula, cpf_aluno)
         self._id_aula = id_aula
         self._cpf_aluno = cpf_aluno
 
-    @property
-    def id_aula(self):
+    def get_aula(self):
         return self._id_aula
 
-    @id_aula.setter
-    def id_aula(self, value):
-        self._id_aula = value
+   
+    def set_id_aula(self, id_aula):
+        self._id_aula = id_aula
 
-    @property
-    def cpf_aluno(self):
+   
+    def get_cpf_aluno(self):
         return self._cpf_aluno
 
-    @cpf_aluno.setter
-    def cpf_aluno(self, value):
-        self._cpf_aluno = value
+    def set_cpf_aluno(self, cpf_aluno):
+        self._cpf_aluno = cpf_aluno
 
         pass
 

@@ -1,24 +1,27 @@
+from Models.Plano import Plano
+
 class Plano:
     def __init__(self, tipo_plano, id_plano):
+        super().__init__(self, tipo_plano, id_plano)
         self._id_plano = id_plano
         self._tipo_plano = tipo_plano
 
 
-    @property
-    def id_plano(self):
+    
+    def get_id_plano(self):
         return self._id_plano
 
-    @id_plano.setter
-    def id_plano(self, value):
-        self._id_plano = value
+    
+    def set_id_plano(self, id_plano):
+        self._id_plano = id_plano
 
-    @property
-    def tipo_plano(self):
+  
+    def get_tipo_plano(self):
         return self._tipo_plano
 
-    @tipo_plano.setter
-    def tipo_plano(self, value):
-        self._tipo_plano = value
+ 
+    def set_tipo_plano(self, tipo_plano):
+        self._tipo_plano = tipo_plano
 
    
 

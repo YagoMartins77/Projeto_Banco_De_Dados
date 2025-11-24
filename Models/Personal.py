@@ -1,5 +1,8 @@
+from Models.Personal import Personal
+
 class Personal:
     def __init__(self, cpf, rg_pers, nome_pers, horario_pers, telefone_pers):
+        super().__init__(self, cpf, rg_pers, nome_pers, horario_pers, telefone_pers)
         self._cpf = cpf
         self._rg_pers = rg_pers
         self._nome_pers = nome_pers

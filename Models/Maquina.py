@@ -1,33 +1,30 @@
+from Models.Maquina import Maquina
+
 class Maquina:
     def __init__(self, nome, id_mqn, parte_trabalhada):
+        super().__init__(self, nome, id_mqn, parte_trabalhada)
         self._nome_mqn = nome_mqn
         self._id_mqn = id_mqn
         self._parte_trabalhada = parte_trabalhada
         
-
-    @property
-    def nome(self):
+  
+    def get_nome(self):
         return self._nome_mqn
 
-    @nome.setter
-    def nome(self, value):
-        self._nome_mqn = value
+    def set_nome(self, nome):
+        self._nome_mqn = nome
 
-    @property
-    def id_mqn(self):
+    def get_id_mqn(self):
         return self._id_mqn
 
-    @id_mqn.setter
-    def id_mqn(self, value):
-        self._id_mqn = value
+    def set_id_mqn(self, id_mqn):
+        self._id_mqn = id_mqn
 
-    @property
-    def parte_trabalhada(self):
+    def get_parte_trabalhada(self):
         return self._parte_trabalhada
 
-    @parte_trabalhada.setter
-    def parte_trabalhada(self, value):
-        self._parte_trabalhada = value
+    def set_parte_trabalhada(self, parte_trabalhada):
+        self._parte_trabalhada = parte_trabalhada
 
         pass
 

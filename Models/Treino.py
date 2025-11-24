@@ -1,5 +1,6 @@
 class Treino:
     def __init__(self, id, alongamentos, exercicios_arbcs, exercicios_mqn, carga_mqn, cpf_aluno):
+        super().__init__(self, id, alongamentos, exercicios_arbcs, exercicios_mqn, carga_mqn, cpf_aluno) 
         self._id = id 
         self._alongamentos = alongamentos
         self._exercicios_mqn = exercicios_mqn
@@ -7,53 +8,43 @@ class Treino:
         self._carga_mqn = carga_mqn
         self._cpf_aluno = cpf_aluno
 
-    @property
-    def id(self):
+    def get_id(self):
         return self._id
 
-    @id.setter
-    def id(self, value):
-        self._id = value
+    def set_id(self, id):
+        self._id = id
 
-    @property
-    def alongamentos(self):
+    def get_alongamentos(self):
         return self._alongamentos
 
-    @alongamentos.setter
-    def alongamentos(self, value):
-        self._alongamentos = value
+    def set_alongamentos(self, alongamentos):
+        self._alongamentos = alongamentos
 
-    @property
-    def exercicios_mqn(self):
+    def get_exercicios_mqn(self):
         return self._exercicios_mqn
 
-    @exercicios_mqn.setter
-    def exercicios_mqn(self, value):
-        self._exercicios_mqn = value
+    def set_exercicios_mqn(self, exercicios_mqn):
+        self._exercicios_mqn = exercicios_mqn
 
-    @property
-    def exercicios_arbcs(self):
+    def get_exercicios_arbcs(self):
         return self._exercicios_arbcs
 
-    @exercicios_arbcs.setter
-    def exercicios_arbcs(self, value):
-        self._exercicios_arbcs = value
+    def set_exercicios_arbcs(self, exercicios_arbcs):
+        self._exercicios_arbcs = exercicios_arbcs
 
-    @property
-    def carga_mqn(self):
+   
+    def get_carga_mqn(self):
         return self._carga_mqn
 
-    @carga_mqn.setter
-    def carga_mqn(self, value):
-        self._carga_mqn = value
+    def set_carga_mqn(self, carga_mqn):
+        self._carga_mqn = carga_mqn
 
-    @property
-    def cpf_aluno(self):
+    def get_cpf_aluno(self):
         return self._cpf_aluno
 
-    @cpf_aluno.setter
-    def cpf_aluno(self, value):
-        self._cpf_aluno = value
+  
+    def set_cpf_aluno(self, cpf_aluno):
+        self._cpf_aluno = cpf_aluno
 
         pass
 
